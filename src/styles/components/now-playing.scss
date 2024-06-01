@@ -37,10 +37,12 @@
 
   &__track {
     font-weight: var(--font-weight-heading);
+    font-size: clamp(2.5rem, 6vw, 4rem);
   }
 
   &__artists {
     opacity: 0.8;
+    font-size: clamp(2.5rem, 6vw, 4rem);
   }
 
   &--active {
