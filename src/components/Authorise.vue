@@ -53,6 +53,11 @@ export default {
      */
     if (this.auth.refreshToken) {
       this.requestAccessTokens('refresh_token')
+      
+      // Automatically refresh token every 24 hours
+      setInterval(() => {
+        this.requestAccessTokens('refresh_token');
+      }, 24 * 60 * 60 * 1000); // in milliseconds
     }
   },
 
